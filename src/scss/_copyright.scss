@@ -1,0 +1,37 @@
+.copyright-footer {
+  width: 100%;
+  background-color: $bgColor;
+
+  &__container {
+    @include adaptiv-value('padding-top', 30, 20, 1);
+    @include adaptiv-value('padding-bottom', 23, 13, 1);
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptiv-value('font-size', 14, 12, 1);
+    line-height: 14/22 * 100%;
+    margin: -10px -10px;
+  }
+
+  &__text {
+    pointer-events: none;
+    margin: 10px 10px;
+  }
+
+  &__link {
+    margin: 10px 10px;
+    color: $mainColor;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+      }
+    }
+  }
+}

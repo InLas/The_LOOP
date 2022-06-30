@@ -1,0 +1,227 @@
+.footer {
+  width: 100%;
+  @include adaptiv-value('margin-top', 150, 75, 1);
+  color: $bgColor;
+  background-color: $mainColor;
+
+  &__container {
+    @include adaptiv-value('padding-top', 73, 20, 1);
+    @include adaptiv-value('padding-bottom', 73, 20, 1);
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin: 0 -10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -10px -10px 30px -10px;
+
+    @media (min-width: $tablet-width) {
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0 10px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    @include adaptiv-value('font-size', 24, 15, 1);
+    line-height: 29/24 * 100%;
+    white-space: nowrap;
+    font-weight: 700;
+    margin: 10px 10px;
+    color: inherit;
+    transition: all 0.3s ease 0s;
+
+    @extend ._icon-logo;
+
+    &::before {
+      @extend %ic;
+      font-size: 40px;
+      @include adaptiv-value('margin-right', 20, 10, 1);
+      color: $accentColor;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 32px 0;
+    }
+  }
+
+  &__text {
+    @include adaptiv-value('font-size', 14, 12, 1);
+    line-height: 22/14 * 100%;
+    max-width: 200px;
+    margin: 10px 10px;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $tablet-width) {
+      flex: 0 1 686px;
+      justify-content: space-between;
+      flex-direction: row;
+      margin: 0 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &._active {
+      .footer__sub-list {
+        position: static;
+        visibility: visible;
+        pointer-events: auto;
+        margin: 0 0 20px 0;
+        opacity: 1;
+      }
+
+      .footer__button {
+        color: $accentColor;
+
+        &::before {
+          transform: rotate(180deg);
+          color: $accentColor;
+        }
+      }
+    }
+  }
+
+
+  &__button {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+    text-transform: uppercase;
+    font: inherit;
+    @include adaptiv-value('font-size', 10, 12, 1);
+    line-height: 12/10 * 100%;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: inherit;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    @extend ._icon-arrow_down;
+
+    &::before {
+      @extend %ic;
+      font-size: 10px;
+      margin: 0 0 0 5px;
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 20px 0;
+      cursor: auto;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__sub-list {
+    position: absolute;
+    visibility: hidden;
+    pointer-events: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    transition: margin-bottom 0.5s ease 0s;
+
+    @media (min-width: $tablet-width) {
+      position: static;
+      visibility: visible;
+      pointer-events: auto;
+      opacity: 1;
+    }
+  }
+
+  &__sub-item {
+    &:not(:last-child) {
+      margin: 0 0 10px 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    line-height: 22/14 * 100%;
+    color: #CBCFD4;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+      }
+    }
+
+    &--vk {
+      @extend ._icon-vk;
+
+      &::before {
+        @extend %ic;
+        font-size: 16px;
+        margin: 0 5px 0 0;
+      }
+    }
+
+    &--fb {
+      @extend ._icon-facebook;
+
+      &::before {
+        @extend %ic;
+        font-size: 16px;
+        margin: 0 5px 0 0;
+      }
+    }
+
+    &--inst {
+      @extend ._icon-instagram;
+
+      &::before {
+        @extend %ic;
+        font-size: 16px;
+        margin: 0 5px 0 0;
+      }
+    }
+
+    &::before {
+      color: $accentColor;
+    }
+  }
+}

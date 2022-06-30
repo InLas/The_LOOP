@@ -1,0 +1,74 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+    url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+// Шрифты =================
+$fontfamily: "Montserrat";
+$fontsize: 14px;
+$lineheight: 18px;
+$fontweight: 400;
+// Шрифты =================
+
+// Переменные =============
+$mainColor: #212121;
+$bgColor: #ffffff;
+$creamColor: #F9F6F1;
+$accentColor: #D7B399;
+$containerPadding: 0 15px;
+// Переменные =============
+
+// Адаптивное свойство =============
+$maxWidth: 1920;
+$maxWidthContainer: 1140;
+
+@mixin adaptiv-value($propepty, $startSize, $minSize, $type) {
+  $addSize: $startSize - $minSize;
+
+  @if $type==1 {
+    #{$propepty}: $startSize + px;
+
+    @media (max-width: #{$maxWidthContainer + px}) {
+      #{$propepty}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+    }
+  }
+
+  @else if $type==2 {
+    #{$propepty}: $startSize + px;
+
+    @media (min-width: #{$maxWidthContainer + px}) {
+      #{$propepty}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+    }
+  }
+
+  @else {
+    #{$propepty}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+  }
+}
+
+// Адаптивное свойство =============
+
+@import 'global/fonts.scss';
+
+@import 'global/variables.scss';
+
+@import 'global/global.scss';
+
+@import 'global/icons.scss';
+
+@import '_page.scss';
+
+@import '_header.scss';
+
+@import '_footer.scss';
+
+@import '_copyright.scss';
+
+@import '_intro.scss';

@@ -1,0 +1,212 @@
+.intro {
+  margin: 50px 0 0 0;
+  padding: 20px 0 0 0;
+  @include adaptiv-value('padding-bottom', 207, 70, 1);
+  color: #000;
+  background-color: $creamColor;
+
+  @media (min-width: $desktop-width) {
+    margin: 139px 0 0 0;
+    padding: 117px 0 0 0;
+    @include adaptiv-value('padding-bottom', 207, 70, 1);
+  }
+}
+
+.slider-intro {
+  user-select: none;
+  position: relative;
+  width: 100%;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $desktop-width) {
+      align-items: flex-start;
+    }
+  }
+
+  &__subtitle {
+    @include adaptiv-value('font-size', 30, 15, 1);
+    line-height: 30/37 * 100%;
+    margin: 0 0 35px 0;
+    padding: 0;
+  }
+
+  &__title {
+    @include adaptiv-value('font-size', 55, 28, 1);
+    line-height: 55/67 * 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 55px 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 16/19 * 100%;
+    text-transform: uppercase;
+    min-width: 240px;
+    min-height: 55px;
+    color: $bgColor;
+    background-color: $accentColor;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+        background-color: $mainColor;
+      }
+    }
+  }
+
+  &__discounts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  &__discount {
+    @include adaptiv-value('font-size', 24, 20, 1);
+    line-height: 24/30 * 100%;
+    font-weight: 700;
+    text-decoration: line-through;
+    max-width: 556px;
+    margin: 0 7px 14px 0;
+  }
+
+  &__price {
+    @include adaptiv-value('font-size', 42, 25, 1);
+    line-height: 42/51 * 100%;
+    font-weight: 700;
+    color: #D84033;
+  }
+
+  &__photo {
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+      top: -134px;
+      right: 0;
+    }
+  }
+
+
+  // &__image {
+  //   overflow: hidden;
+
+  //   max-width: 475px;
+
+  //   border-radius: 5px;
+
+  //   box-shadow: 0 0 50px 0 rgba($color: #000000, $alpha: 0.5);
+  // }
+
+  // Ограничивающая оболочка
+  & .slick-list {
+    overflow: hidden;
+
+    position: relative;
+  }
+
+  // Лента слайдов
+  // & .slick-track {
+  //   display: flex;
+  // }
+
+  // Слайдер запущен
+  .slick-slider.slick-initialized {}
+
+  // Слайдер с точками
+  .slick-slider.slick-dotted {}
+
+  // Слайд
+  .slick-slide {}
+
+  // Слайд активный (показывается)
+  .slick-slide.slick-active {}
+
+  // Слайд основной
+  .slick-slide.slick-current {}
+
+  // Слайд по центру
+  .slick-slide.slick-center {}
+
+  // Клонированный слайд
+  .slick-slide.slick-cloned {}
+
+
+
+  // Стрелка не активная
+  .slick-arrow.slick-disabled {}
+
+  // Точки (булиты)
+  // & .slick-dots {
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: -45px;
+
+  //   width: 100%;
+
+  //   margin: 0;
+  //   padding: 0;
+  // }
+
+  // & .slick-dots li {
+  //   list-style: none;
+
+  //   margin: 0 6px;
+
+  //   // Активная точка
+  //   &.slick-active button {
+  //     background-color: rgba($color: #ffffff, $alpha: 1);
+  //   }
+  // }
+
+  // Элемент точки
+  // & .slick-dots li button {
+  //   display: block;
+
+  //   font-size: 0;
+  //   line-height: 0;
+
+  //   width: 10px;
+  //   height: 10px;
+
+  //   padding: 0;
+
+  //   background-color: rgba($color: #ffffff, $alpha: 0.5);
+  //   border-radius: 50%;
+  //   border: none;
+  //   cursor: pointer;
+  //   transition: 0.3s;
+  // }
+}
