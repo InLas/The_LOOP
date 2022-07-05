@@ -1,8 +1,8 @@
 .footer {
   width: 100%;
   @include adaptiv-value('margin-top', 150, 75, 1);
-  color: $bgColor;
-  background-color: $mainColor;
+  color: $whiteColor;
+  background-color: $blackColor;
 
   &__container {
     @include adaptiv-value('padding-top', 73, 20, 1);

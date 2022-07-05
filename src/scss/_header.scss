@@ -40,7 +40,7 @@
   left: 0;
   top: -100%;
   box-sizing: border-box;
-  background-color: rgba($color: $bgColor, $alpha: 0.5);
+  background-color: rgba($color: $whiteColor, $alpha: 0.8);
   transition: all 0.5s ease 0s;
   opacity: 0;
 
@@ -150,6 +150,8 @@
   }
 
   &__link {
+    @include adaptiv-value('font-size', 14, 18, 1);
+    line-height: 14/18 * 100%;
     font-weight: 500;
     color: inherit;
     transition: all 0.3s ease 0s;
@@ -290,7 +292,7 @@
     &::before {
       @extend %ic;
       font-size: 30px;
-      color: $mainColor;
+      color: $blackColor;
       transition: all 0.3s ease 0s;
     }
 
@@ -317,7 +319,7 @@
     text-align: center;
     width: 15px;
     height: 15px;
-    color: $bgColor;
+    color: $whiteColor;
     background-color: $accentColor;
     border-radius: 50%;
     pointer-events: none;
@@ -361,12 +363,12 @@
       height: 5px;
       padding: 0;
       margin: 0;
-      background-color: $mainColor;
+      background-color: $blackColor;
       border-radius: 25px;
       transition: all 0.3s ease 0s;
       box-shadow:
-        0 10px 0 $mainColor,
-        0 20px 0 $mainColor;
+        0 10px 0 $blackColor,
+        0 20px 0 $blackColor;
     }
 
     &._active {

@@ -18,8 +18,8 @@ $fontweight: 400;
 // Шрифты =================
 
 // Переменные =============
-$mainColor: #212121;
-$bgColor: #ffffff;
+$blackColor: #212121;
+$whiteColor: #ffffff;
 $creamColor: #F9F6F1;
 $accentColor: #D7B399;
 $containerPadding: 0 15px;
@@ -72,3 +72,7 @@ $maxWidthContainer: 1140;
 @import '_copyright.scss';
 
 @import '_intro.scss';
+
+@import '_delivery.scss';
+
+@import '_collections.scss';
