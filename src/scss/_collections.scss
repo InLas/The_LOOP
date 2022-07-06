@@ -1,0 +1,135 @@
+.collections {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  @include adaptiv-value('margin-bottom', 150, 50, 1);
+
+  &__body {
+
+    @media (min-width: $tablet-width) {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__header {
+    background-color: $creamColor;
+
+    &--women {
+      background-color: #F4F4F4;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $tablet-width) {
+      justify-content: flex-end;
+      padding: 0 0 0 15px;
+    }
+
+    &--right {
+      @media (min-width: $tablet-width) {
+        justify-content: flex-start;
+        padding: 0 15px 0 0;
+      }
+
+    }
+  }
+
+  &__box {
+    flex: 0 1 555px;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 58px 21px;
+    box-sizing: border-box;
+    background: bottom right no-repeat url(../img/men.png);
+
+    &--women {
+      background: bottom right no-repeat url(../img/women.png);
+    }
+  }
+
+  &__title {
+    @include adaptiv-value('font-size', 24, 16, 1);
+    line-height: 30/24 * 100%;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+
+    & span {
+      font-weight: 300;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 19/16 * 100%;
+    font-weight: 300;
+    margin: 0 0 40px 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    line-height: 0;
+    width: 80px;
+    height: 30px;
+    background-color: $accentColor;
+
+    @extend ._icon-arrow_left;
+
+    &::before {
+      @extend %ic;
+      font-size: 8px;
+      transition: all 0.3s ease 0s;
+      color: $whiteColor;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @media (min-width: $desktop-width) {
+      justify-content: flex-end;
+    }
+
+    &--right {
+      @media (min-width: $desktop-width) {
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 277px;
+    max-height: 262px;
+    background-color: $creamColor;
+
+    &:nth-child(3n+1) {
+      background-color: #F4F4F4;
+    }
+  }
+
+  &__name {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+}
