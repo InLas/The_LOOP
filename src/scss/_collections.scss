@@ -53,7 +53,7 @@
 
   &__title {
     @include adaptiv-value('font-size', 24, 16, 1);
-    line-height: 30/24 * 100%;
+    line-height: calc(30 / 24 * 100%);
     font-weight: 500;
     text-transform: uppercase;
     margin: 0 0 25px 0;
@@ -64,8 +64,8 @@
   }
 
   &__text {
-    font-size: 16px;
-    line-height: 19/16 * 100%;
+    @include adaptiv-value('font-size', 16, 12, 1);
+    line-height: calc(19 / 16 * 100%);
     font-weight: 300;
     margin: 0 0 40px 0;
     padding: 0;
@@ -85,7 +85,7 @@
 
     &::before {
       @extend %ic;
-      font-size: 8px;
+      font-size: 20px;
       transition: all 0.3s ease 0s;
       color: $whiteColor;
     }
@@ -97,6 +97,7 @@
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
+    max-width: 555px;
     margin: 0;
     padding: 0;
 

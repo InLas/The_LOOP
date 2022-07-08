@@ -1,14 +1,15 @@
 .intro {
-  margin: 50px 0 0 0;
-  padding: 20px 0 0 0;
-  @include adaptiv-value('padding-bottom', 207, 70, 1);
   color: #000;
   background-color: $creamColor;
 
-  @media (min-width: $desktop-width) {
-    margin: 139px 0 0 0;
-    padding: 117px 0 0 0;
+  &__container {
+    padding: 70px 15px 0 15px;
     @include adaptiv-value('padding-bottom', 207, 70, 1);
+
+    @media (min-width: $desktop-width) {
+      padding: 256px 15px 0 15px;
+      @include adaptiv-value('padding-bottom', 207, 70, 1);
+    }
   }
 }
 
@@ -42,14 +43,14 @@
 
   &__subtitle {
     @include adaptiv-value('font-size', 30, 15, 1);
-    line-height: 30/37 * 100%;
+    line-height: calc(30 / 37 * 100%);
     margin: 0 0 35px 0;
     padding: 0;
   }
 
   &__title {
     @include adaptiv-value('font-size', 55, 28, 1);
-    line-height: 55/67 * 100%;
+    line-height: calc(55 / 67 * 100%);
     font-weight: 700;
     text-transform: uppercase;
     white-space: nowrap;
@@ -63,7 +64,7 @@
     justify-content: center;
     box-sizing: border-box;
     font-size: 16px;
-    line-height: 16/19 * 100%;
+    line-height: calc(16 / 19 * 100%);
     text-transform: uppercase;
     min-width: 240px;
     min-height: 55px;
@@ -96,7 +97,7 @@
 
   &__discount {
     @include adaptiv-value('font-size', 24, 20, 1);
-    line-height: 24/30 * 100%;
+    line-height: calc(24 / 30 * 100%);
     font-weight: 700;
     text-decoration: line-through;
     max-width: 556px;
@@ -105,7 +106,7 @@
 
   &__price {
     @include adaptiv-value('font-size', 42, 25, 1);
-    line-height: 42/51 * 100%;
+    line-height: calc(42 / 51 * 100%);
     font-weight: 700;
     color: #D84033;
   }

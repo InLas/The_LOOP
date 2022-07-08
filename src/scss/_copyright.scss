@@ -13,7 +13,7 @@
     align-items: center;
     justify-content: space-between;
     @include adaptiv-value('font-size', 14, 12, 1);
-    line-height: 14/22 * 100%;
+    line-height: calc(14 / 22 * 100%);
     margin: -10px -10px;
   }
 

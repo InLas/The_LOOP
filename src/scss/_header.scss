@@ -1,8 +1,7 @@
 .header {
   position: fixed;
   width: 100%;
-  top: 0;
-  left: 0;
+  max-width: $maxWidth + px;
   z-index: 50;
 
   &::before {
@@ -55,7 +54,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    flex: 0 0 918/1110 * 100%;
+    flex: 0 0 calc(918 / 1110 * 100%);
     position: static;
     visibility: visible;
     overflow: visible;
@@ -151,7 +150,7 @@
 
   &__link {
     @include adaptiv-value('font-size', 14, 18, 1);
-    line-height: 14/18 * 100%;
+    line-height: calc(14 / 18 * 100%);
     font-weight: 500;
     color: inherit;
     transition: all 0.3s ease 0s;
@@ -251,7 +250,7 @@
     align-items: center;
     position: relative;
     @include adaptiv-value('font-size', 24, 15, 1);
-    line-height: 29/24 * 100%;
+    line-height: calc(29 / 24 * 100%);
     white-space: nowrap;
     font-weight: 700;
     color: inherit;
@@ -314,7 +313,7 @@
     top: 0;
     right: -10px;
     font-size: 12px;
-    line-height: 15/12 * 100%;
+    line-height: calc(15 / 12 * 100%);
     font-weight: 700;
     text-align: center;
     width: 15px;
