@@ -1082,6 +1082,86 @@ input[type=radio].visually-hidden {
   padding: 0;
 }
 
+.new {
+  margin-bottom: 150px;
+}
+
+.new__title {
+  font-size: 36px;
+  line-height: 122.2222222222%;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.new__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  margin: 0 -15px;
+  padding: 0;
+}
+
+.new__item {
+  position: relative;
+  margin: 0 15px;
+  text-align: center;
+  border: 3px solid #D7B399;
+}
+
+.new__item::before,
+.new__item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+.new__item::before {
+  width: calc(100% + 25px);
+  height: 80%;
+}
+
+.new__item::after {
+  width: 100%;
+  height: calc(100% + 7px);
+}
+
+.new__name {
+  font-size: 14px;
+  line-height: 121.4285714286%;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.new__price {
+  font-size: 18px;
+  line-height: 122.2222222222%;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: #D7B399;
+}
+
 @media (min-width: 768px) {
   .footer__main {
     -webkit-box-orient: horizontal;
@@ -1419,6 +1499,18 @@ input[type=radio].visually-hidden {
 
   .collections__text {
     font-size: calc(12px + 4 * ((100vw - 320px) / 820));
+  }
+
+  .new {
+    margin-bottom: calc(50px + 100 * ((100vw - 320px) / 820));
+  }
+
+  .new__title {
+    font-size: calc(20px + 16 * ((100vw - 320px) / 820));
+  }
+
+  .new__title {
+    margin-bottom: calc(50px + 50 * ((100vw - 320px) / 820));
   }
 }
 

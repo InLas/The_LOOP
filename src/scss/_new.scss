@@ -1,0 +1,75 @@
+.new {
+  @include adaptiv-value('margin-bottom', 150, 50, 1);
+
+  &__container {}
+
+  &__box {}
+
+  &__title {
+    @include adaptiv-value('font-size', 36, 20, 1);
+    line-height: calc(44 / 36 * 100%);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    @include adaptiv-value('margin-bottom', 100, 50, 1);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 -15px;
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 15px;
+    text-align: center;
+    border: 3px solid $accentColor;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      transform-origin: 50% 50%;
+      background-color: $whiteColor;
+      z-index: 1;
+    }
+
+    &::before {
+      width: calc(100% + 25px);
+      height: 80%;
+    }
+
+    &::after {
+      width: 100%;
+      height: calc(100% + 7px);
+    }
+  }
+
+  &__image {}
+
+  &__name {
+    font-size: 14px;
+    line-height: calc(17 / 14 * 100%);
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  &__price {
+    font-size: 18px;
+    line-height: calc(22 / 18 * 100%);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: $accentColor;
+  }
+
+}
