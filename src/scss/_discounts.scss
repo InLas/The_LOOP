@@ -1,5 +1,6 @@
-.new {
-  @include adaptiv-value('margin-bottom', 135, 35, 1);
+.discounts {
+
+  &__container {}
 
   &__title {
     @include adaptiv-value('font-size', 36, 20, 1);

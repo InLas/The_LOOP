@@ -3,27 +3,27 @@
   background-color: $whiteColor;
 
   &__container {
-    @include adaptiv-value('padding-top', 30, 20, 1);
-    @include adaptiv-value('padding-bottom', 23, 13, 1);
+    @include adaptiv-value('padding-top', 20, 10, 1);
+    @include adaptiv-value('padding-bottom', 13, 3, 1);
   }
 
-  &__main {
+  &__body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     @include adaptiv-value('font-size', 14, 12, 1);
     line-height: calc(14 / 22 * 100%);
-    margin: -10px -10px;
+    margin: -10px;
   }
 
   &__text {
     pointer-events: none;
-    margin: 10px 10px;
+    margin: 10px;
   }
 
   &__link {
-    margin: 10px 10px;
+    margin: 10px;
     color: $blackColor;
     transition: all 0.3s ease 0s;
     cursor: pointer;

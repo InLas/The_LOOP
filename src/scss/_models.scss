@@ -1,0 +1,135 @@
+.models {
+
+  &__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0 -15px 85px -15px;
+    padding: 0;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 15px 15px 15px;
+    padding: 25px 22px;
+    text-align: center;
+    border: 3px solid $accentColor;
+
+    &:last-child {
+      margin: 0 15px;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $whiteColor;
+      z-index: 1;
+    }
+
+    &::before {
+      width: calc(100% + 9px);
+      height: calc(100% - 50px);
+    }
+
+    &::after {
+      width: calc(100% - 50px);
+      height: calc(100% + 9px);
+    }
+  }
+
+  &__box {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__image {
+    margin: 0 0 25px 0;
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: calc(17 / 14 * 100%);
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    padding: 0;
+  }
+
+  &__price {
+    font-size: 18px;
+    line-height: calc(22 / 18 * 100%);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    color: $accentColor;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  &__link {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: calc(20 / 16 * 100%);
+    text-transform: uppercase;
+    min-width: 220px;
+    height: 55px;
+    margin: 15px;
+    box-sizing: border-box;
+    color: $whiteColor;
+    background: $accentColor;
+    border: none;
+    transition: all 0.3s ease 0s;
+
+    @extend ._icon-arrow_left;
+
+    &::before {
+      @extend %ic;
+      font-size: 20px;
+      margin: 0 0 0 9px;
+      transition: all 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+        background: $blackColor;
+      }
+    }
+  }
+
+  &__more {
+    font-size: 16px;
+    line-height: calc(20 / 16 * 100%);
+    text-transform: uppercase;
+    min-width: 220px;
+    height: 55px;
+    margin: 15px;
+    box-sizing: border-box;
+    color: $whiteColor;
+    background: $accentColor;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+        background: $blackColor;
+      }
+    }
+  }
+}

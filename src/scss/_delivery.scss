@@ -1,17 +1,17 @@
 .delivery {
-  @include adaptiv-value('padding-top', 80, 40, 1);
-  @include adaptiv-value('padding-bottom', 70, 30, 1);
   color: $whiteColor;
   background-color: $blackColor;
 
   &__container {
     text-align: center;
+    @include adaptiv-value('padding-top', 80, 40, 1);
+    @include adaptiv-value('padding-bottom', 70, 30, 1);
   }
 
   &__title {
     text-transform: uppercase;
     @include adaptiv-value('font-size', 30, 15, 1);
-    line-height: calc(36 / 30 * 100%);
+    line-height: calc(37 / 30 * 100%);
     font-weight: 700;
     margin: 0;
     @include adaptiv-value('margin-bottom', 23, 10, 1);

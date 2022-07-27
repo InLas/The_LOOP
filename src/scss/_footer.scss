@@ -9,7 +9,7 @@
     @include adaptiv-value('padding-bottom', 73, 20, 1);
   }
 
-  &__main {
+  &__body {
     display: flex;
     flex-direction: column;
     align-items: center;
