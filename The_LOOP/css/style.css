@@ -758,7 +758,6 @@ input[type=radio].visually-hidden {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 20px;
 }
 
 .slider-intro__description {
@@ -857,7 +856,6 @@ input[type=radio].visually-hidden {
 .slider-intro .slick-list {
   overflow: hidden;
   position: relative;
-  margin: 0 -20px;
 }
 
 .slider-intro .slick-track {
@@ -1084,6 +1082,7 @@ input[type=radio].visually-hidden {
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+  color: #212121;
 }
 
 .new {
@@ -1099,6 +1098,10 @@ input[type=radio].visually-hidden {
   margin-bottom: 100px;
 }
 
+.models__container {
+  margin-bottom: 85px;
+}
+
 .models__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1112,20 +1115,15 @@ input[type=radio].visually-hidden {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
-  margin: 0 -15px 85px -15px;
+  margin: -15px;
   padding: 0;
 }
 
 .models__item {
   position: relative;
-  margin: 0 15px 15px 15px;
-  padding: 25px 22px;
+  margin: 15px;
   text-align: center;
   border: 3px solid #D7B399;
-}
-
-.models__item:last-child {
-  margin: 0 15px;
 }
 
 .models__item::before,
@@ -1155,6 +1153,9 @@ input[type=radio].visually-hidden {
 .models__box {
   position: relative;
   z-index: 2;
+  padding: 25px 22px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .models__image {
@@ -1167,6 +1168,7 @@ input[type=radio].visually-hidden {
   font-weight: 600;
   margin: 0 0 15px 0;
   padding: 0;
+  color: #212121;
 }
 
 .models__price {
@@ -1231,6 +1233,11 @@ input[type=radio].visually-hidden {
   transition: all 0.3s ease 0s;
 }
 
+.models__link:focus {
+  color: #D7B399;
+  background: #212121;
+}
+
 .models__more {
   font-size: 16px;
   line-height: 125%;
@@ -1246,6 +1253,11 @@ input[type=radio].visually-hidden {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+}
+
+.models:focus {
+  color: #D7B399;
+  background: #212121;
 }
 
 .subscribe {
@@ -1286,11 +1298,14 @@ input[type=radio].visually-hidden {
   padding: 0;
 }
 
-.subscribe__form {
+.subscribe__box {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 475px;
-          flex: 0 1 475px;
+      -ms-flex: 0 1 505px;
+          flex: 0 1 505px;
   margin: 15px;
+}
+
+.subscribe__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1299,7 +1314,7 @@ input[type=radio].visually-hidden {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 15px 0;
+  margin: -15px;
   padding: 0;
 }
 
@@ -1310,7 +1325,7 @@ input[type=radio].visually-hidden {
   padding: 9px 20px 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 15px 0;
+  margin: 15px;
   margin-left: 15px;
   margin-right: 17.5px;
   border: 3px solid #ffffff;
@@ -1366,12 +1381,21 @@ input[type=radio].visually-hidden {
   text-transform: uppercase;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 15px 0;
+  margin: 15px;
   margin-left: 17.5px;
   margin-right: 15px;
   padding: 12px 0;
   color: #ffffff;
   background-color: #D7B399;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.subscribe__submit:focus {
+  color: #D7B399;
+  background: #ffffff;
 }
 
 .discounts__title {
@@ -1558,7 +1582,7 @@ input[type=radio].visually-hidden {
     content: "";
     position: absolute;
     top: 0;
-    left: -13px;
+    left: -12px;
     width: 15px;
     height: 15px;
     background: no-repeat url(../img/svg/triangle.svg);
@@ -1621,9 +1645,6 @@ input[type=radio].visually-hidden {
   }
 
   .subscribe__form {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 510px;
-            flex: 0 1 510px;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
@@ -1867,6 +1888,11 @@ input[type=radio].visually-hidden {
 
   .subscribe__input:focus {
     border: 3px solid #D7B399;
+  }
+
+  .subscribe__submit:hover {
+    color: #D7B399;
+    background: #ffffff;
   }
 }
 @supports (-webkit-appearance:none){
