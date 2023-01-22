@@ -32,17 +32,19 @@
     padding: 0;
   }
 
-  &__form {
-    flex: 0 1 475px;
+  &__box {
+    flex: 0 1 505px;
     margin: 15px;
+  }
+
+  &__form {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 15px 0;
+    margin: -15px;
     padding: 0;
 
     @media (min-width: $desktop-width) {
-      flex: 0 1 510px;
       flex-wrap: nowrap;
     }
   }
@@ -51,7 +53,7 @@
     flex: 0 1 255px;
     padding: 9px 20px 10px;
     box-sizing: border-box;
-    margin: 15px 0;
+    margin: 15px;
     @include adaptiv-value('margin-left', 15, 10, 1);
     @include adaptiv-value('margin-right', 17.5, 10, 1);
     border: 3px solid $whiteColor;
@@ -84,11 +86,25 @@
     font-weight: 500;
     text-transform: uppercase;
     box-sizing: border-box;
-    margin: 15px 0;
+    margin: 15px;
     @include adaptiv-value('margin-left', 17.5, 10, 1);
     @include adaptiv-value('margin-right', 15, 10, 1);
     padding: 12px 0;
     color: $whiteColor;
     background-color: $accentColor;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentColor;
+        background: $whiteColor;
+      }
+    }
+
+    &:focus {
+      color: $accentColor;
+      background: $whiteColor;
+    }
   }
 }
