@@ -1,5 +1,6 @@
 .collections {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   @include adaptiv-value('margin-bottom', 150, 50, 1);
@@ -69,6 +70,14 @@
     font-weight: 300;
     margin: 0 0 40px 0;
     padding: 0;
+
+    @media (min-width: $mobile-width) {
+      @include adaptiv-value('width', 340, 150, 1);
+    }
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+    }
   }
 
   &__link {

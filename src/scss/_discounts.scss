@@ -1,7 +1,5 @@
 .discounts {
 
-  &__container {}
-
   &__title {
     @include adaptiv-value('font-size', 36, 20, 1);
     line-height: calc(44 / 36 * 100%);

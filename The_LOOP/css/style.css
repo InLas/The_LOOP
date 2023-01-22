@@ -857,7 +857,6 @@ input[type=radio].visually-hidden {
 .slider-intro .slick-list {
   overflow: hidden;
   position: relative;
-  margin: 0 -20px;
 }
 
 .slider-intro .slick-track {
@@ -945,6 +944,9 @@ input[type=radio].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1383,6 +1385,12 @@ input[type=radio].visually-hidden {
   margin-bottom: 100px;
 }
 
+@media (min-width: 320px) {
+  .collections__text {
+    width: 340px;
+  }
+}
+
 @media (min-width: 768px) {
   .footer__body {
     -webkit-box-orient: horizontal;
@@ -1469,6 +1477,10 @@ input[type=radio].visually-hidden {
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding: 0 15px 0 0;
+  }
+
+  .collections__text {
+    width: auto;
   }
 }
 
@@ -1801,6 +1813,12 @@ input[type=radio].visually-hidden {
   }
 }
 
+@media (min-width: 320px) and (max-width: 1140px) {
+  .collections__text {
+    width: calc(150px + 190 * ((100vw - 320px) / 820));
+  }
+}
+
 @media (any-hover: hover) {
   .main-header__item:hover .main-header__sub-list {
     visibility: visible;
@@ -1874,6 +1892,14 @@ input[type=radio].visually-hidden {
 .collections__box--women{background:bottom right no-repeat url(../img/women.webp)}
 }
 
+ @media (min-width: 320px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
  @media (min-width: 768px){
 
 @supports (-webkit-appearance:none){
@@ -1899,6 +1925,14 @@ input[type=radio].visually-hidden {
 }
 
  @media (min-width: 1024px) and (max-width: 1140px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (min-width: 320px) and (max-width: 1140px){
 
 @supports (-webkit-appearance:none){
 
