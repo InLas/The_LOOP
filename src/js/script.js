@@ -1,7 +1,7 @@
 'use strict'
 
-@@include('plugins/_slick.min.js');
-@@include('_sliders.js');
+@@include('plugins/slick.min.js');
+@@include('plugins/sliders.js');
 
 const mainHeader = document.querySelector('.main-header');
 const headerItems = document.querySelectorAll('.main-header__item');
